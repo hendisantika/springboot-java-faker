@@ -23,8 +23,14 @@ import static com.hendisantika.springbootjavafaker.FakerUtil.getFakerObjects;
 @Controller
 public class FakerController {
     @GetMapping("/")
-    public String index(@RequestParam(defaultValue = "US") String locale, Model model) {
+    public String index(@RequestParam(defaultValue = "ID") String locale, Model model) {
+        Locale local = new Locale("id", "ID");
         model.addAttribute("locales", Arrays.asList(Locale.US.getCountry(),
+                local.getCountry(),
+                Locale.CHINESE.getCountry(),
+                Locale.ENGLISH.getCountry(),
+                Locale.JAPAN.getCountry(),
+                Locale.KOREA.getCountry(),
                 Locale.FRANCE.getCountry(),
                 Locale.GERMANY.getCountry()));
 
