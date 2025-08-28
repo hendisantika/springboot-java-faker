@@ -20,7 +20,7 @@ dependencies {
     implementation("com.github.javafaker:javafaker:1.0.2")
     implementation("org.apache.commons:commons-text:1.14.0")
 
-    implementation("org.webjars:bootstrap:5.3.7")
+    implementation("org.webjars:bootstrap:5.3.8")
     testImplementation('org.springframework.boot:spring-boot-starter-test') {
         exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
     }
